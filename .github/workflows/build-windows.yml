@@ -37,7 +37,7 @@ jobs:
           python -m PyInstaller
           --noconfirm
           --clean
-          --onefile
+          --onedir
           --windowed
           --name AtendeMP-Bonito
           app.py
@@ -46,17 +46,30 @@ jobs:
         run: >-
           python -m PyInstaller
           --noconfirm
-          --onefile
+          --onedir
           --console
           --name AtendeMP-Bonito-Diagnostico
           app.py
+
+      - name: Criar iniciadores auxiliares
+        shell: powershell
+        run: |
+          '@echo off' | Set-Content -Encoding ascii dist\AtendeMP-Bonito\INICIAR.bat
+          'cd /d "%~dp0"' | Add-Content -Encoding ascii dist\AtendeMP-Bonito\INICIAR.bat
+          'start "" "AtendeMP-Bonito.exe"' | Add-Content -Encoding ascii dist\AtendeMP-Bonito\INICIAR.bat
+          '@echo off' | Set-Content -Encoding ascii dist\AtendeMP-Bonito-Diagnostico\INICIAR-DIAGNOSTICO.bat
+          'cd /d "%~dp0"' | Add-Content -Encoding ascii dist\AtendeMP-Bonito-Diagnostico\INICIAR-DIAGNOSTICO.bat
+          '"AtendeMP-Bonito-Diagnostico.exe"' | Add-Content -Encoding ascii dist\AtendeMP-Bonito-Diagnostico\INICIAR-DIAGNOSTICO.bat
+          'echo.' | Add-Content -Encoding ascii dist\AtendeMP-Bonito-Diagnostico\INICIAR-DIAGNOSTICO.bat
+          'echo Codigo de saida: %ERRORLEVEL%' | Add-Content -Encoding ascii dist\AtendeMP-Bonito-Diagnostico\INICIAR-DIAGNOSTICO.bat
+          'pause' | Add-Content -Encoding ascii dist\AtendeMP-Bonito-Diagnostico\INICIAR-DIAGNOSTICO.bat
 
       - name: Publicar programa para download
         uses: actions/upload-artifact@v4
         with:
           name: AtendeMP-Bonito-Windows
           path: |
-            dist/AtendeMP-Bonito.exe
-            dist/AtendeMP-Bonito-Diagnostico.exe
+            dist/AtendeMP-Bonito/
+            dist/AtendeMP-Bonito-Diagnostico/
           if-no-files-found: error
           retention-days: 30
