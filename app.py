@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import sys
 import tkinter as tk
+import traceback
 from datetime import datetime
 from pathlib import Path
 from tkinter import filedialog, messagebox, ttk
@@ -369,7 +370,40 @@ class MainApp(tk.Tk):
         self.db.close(); self.destroy()
 
 
-if __name__ == "__main__":
-    app = MainApp()
-    if app.winfo_exists(): app.mainloop()
+def report_startup_error(exc: BaseException) -> None:
+    """Registra falhas de inicialização mesmo na versão sem console."""
+    log_path = BASE_DIR / "erro_atendemp.log"
+    details = "".join(traceback.format_exception(type(exc), exc, exc.__traceback__))
+    try:
+        log_path.write_text(
+            f"AtendeMP Bonito - erro em {datetime.now():%Y-%m-%d %H:%M:%S}\n\n{details}",
+            encoding="utf-8",
+        )
+    except OSError:
+        pass
+    try:
+        root = tk.Tk()
+        root.withdraw()
+        messagebox.showerror(
+            "AtendeMP Bonito - erro ao iniciar",
+            f"O programa não conseguiu iniciar.\n\n{exc}\n\n"
+            f"Detalhes foram registrados em:\n{log_path}",
+            parent=root,
+        )
+        root.destroy()
+    except Exception:
+        pass
+    print(details, file=sys.stderr)
 
+
+if __name__ == "__main__":
+    try:
+        app = MainApp()
+        try:
+            exists = bool(app.winfo_exists())
+        except tk.TclError:
+            exists = False
+        if exists:
+            app.mainloop()
+    except BaseException as error:
+        report_startup_error(error)
