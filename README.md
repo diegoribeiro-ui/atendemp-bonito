@@ -28,7 +28,7 @@ No primeiro acesso, o sistema solicitará a criação da senha. O banco será cr
 
 ### Baixar o executável pronto
 
-Abra a aba **Actions** do repositório, escolha **Gerar programa para Windows**, acesse a execução mais recente concluída e baixe o artefato **AtendeMP-Bonito-Windows**. Extraia o ZIP e abra `AtendeMP-Bonito.exe`. Não é necessário instalar Python.
+Abra a aba **Actions** do repositório, escolha **Gerar programa para Windows**, acesse a execução mais recente concluída e baixe o artefato **AtendeMP-Bonito-Windows**. Extraia o ZIP inteiro, abra a pasta `AtendeMP-Bonito` e execute `INICIAR.bat`. Não mova apenas o `.exe`: os demais arquivos da pasta são necessários. Não é necessário instalar Python.
 
 O Windows poderá exibir um aviso por se tratar de aplicativo próprio ainda não assinado digitalmente. Confirme a execução somente após verificar que o arquivo veio deste repositório.
 
@@ -36,7 +36,7 @@ O Windows poderá exibir um aviso por se tratar de aplicativo próprio ainda nã
 
 ```powershell
 py -m pip install pyinstaller
-py -m PyInstaller --noconfirm --clean --onefile --windowed --name AtendeMP-Bonito app.py
+py -m PyInstaller --noconfirm --clean --onedir --windowed --name AtendeMP-Bonito app.py
 ```
 
 O executável ficará na pasta `dist/`. Para manter os dados entre atualizações, preserve a pasta `dados` ao lado do executável.
