@@ -1,21 +1,18 @@
-# Captura Inteligente PJ
+# Captura de Tela PJ — versão simples
 
-Ferramenta local para Windows que captura telas, executa OCR, gera PDF pesquisável e identifica dados úteis para procedimentos.
+Ferramenta local para Windows com um único botão. Ao clicar, o programa se esconde, aguarda dois segundos, captura toda a tela e gera automaticamente PDF pesquisável e RTF editável.
 
 ## Funções
 
-- captura da tela visível;
-- captura da janela ativa após contagem de 3 segundos;
-- captura assistida com rolagem em várias páginas;
-- importação de imagens;
+- captura de toda a tela após um clique;
 - OCR local em português;
 - identificação de procedimentos, ofícios, CPFs, datas, prazos, partes e legislação;
 - PDF comum e PDF pesquisável;
-- exportação do texto e da ficha em JSON.
+- RTF editável com texto e informações identificadas;
+- ficha técnica em JSON;
+- imagem PNG original.
 
-## Limite da captura com rolagem
-
-O programa registra várias telas enquanto o usuário rola manualmente a janela. O resultado é um PDF multipágina. Isso funciona de forma mais ampla do que tentar controlar automaticamente todos os programas do Windows.
+Os arquivos são salvos automaticamente em `Documentos\Capturas PJ`.
 
 ## Dependências
 
@@ -29,7 +26,7 @@ O Tesseract deve estar instalado em `C:\Program Files\Tesseract-OCR\tesseract.ex
 
 ```powershell
 py -m pip install -r requirements.txt
-py app.py
+py app_simples.py
 ```
 
 ## Proteção de dados
@@ -39,4 +36,3 @@ py app.py
 - Revise todos os dados extraídos antes de utilizá-los no SAJ.
 - Salve resultados apenas em pasta institucional autorizada.
 - Feche ou silencie notificações antes de capturar a tela.
-
