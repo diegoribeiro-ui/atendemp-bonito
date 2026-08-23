@@ -1,0 +1,52 @@
+name: Gerar programa para Windows
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "app.py"
+      - "database.py"
+      - ".github/workflows/build-windows.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-build:
+    name: Testar e gerar EXE
+    runs-on: windows-latest
+
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar empacotador
+        run: python -m pip install --upgrade pyinstaller
+
+      - name: Executar testes
+        run: python -m unittest discover -s tests -v
+
+      - name: Gerar executável
+        run: >-
+          python -m PyInstaller
+          --noconfirm
+          --clean
+          --onefile
+          --windowed
+          --name AtendeMP-Bonito
+          app.py
+
+      - name: Publicar programa para download
+        uses: actions/upload-artifact@v4
+        with:
+          name: AtendeMP-Bonito-Windows
+          path: dist/AtendeMP-Bonito.exe
+          if-no-files-found: error
+          retention-days: 30
