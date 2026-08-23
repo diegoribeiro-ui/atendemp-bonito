@@ -2,6 +2,12 @@
 
 Aplicativo local para cadastro do público atendido pela Promotoria de Justiça de Bonito/PA, registro de atendimentos e controle de retornos.
 
+## Central IA — Projetos e Assistentes
+
+O repositório também contém a primeira versão da **Central IA**, um painel local para organizar GPTs, Gems, notebooks do NotebookLM, projetos, prompts, arquivos, links, fluxos de trabalho e histórico de interações.
+
+Abra `central-ia/Central-IA.html` diretamente no navegador. Os registros ficam salvos no próprio navegador e podem ser exportados pelo menu **Backup e dados**. Não publique dados institucionais ou pessoais no repositório.
+
 ## Recursos da primeira versão
 
 - acesso por senha local;
