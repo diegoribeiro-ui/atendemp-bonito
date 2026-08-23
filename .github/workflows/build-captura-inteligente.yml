@@ -41,22 +41,21 @@ jobs:
           --clean
           --onedir
           --windowed
-          --name Captura-Inteligente-PJ
-          app.py
+          --name Captura-Tela-PJ
+          app_simples.py
 
       - name: Incluir instruções e iniciador
         shell: powershell
         run: |
-          Copy-Item captura-inteligente\README.md captura-inteligente\dist\Captura-Inteligente-PJ\LEIA-ME.txt
-          '@echo off' | Set-Content -Encoding ascii captura-inteligente\dist\Captura-Inteligente-PJ\INICIAR.bat
-          'cd /d "%~dp0"' | Add-Content -Encoding ascii captura-inteligente\dist\Captura-Inteligente-PJ\INICIAR.bat
-          'start "" "Captura-Inteligente-PJ.exe"' | Add-Content -Encoding ascii captura-inteligente\dist\Captura-Inteligente-PJ\INICIAR.bat
+          Copy-Item captura-inteligente\README.md captura-inteligente\dist\Captura-Tela-PJ\LEIA-ME.txt
+          '@echo off' | Set-Content -Encoding ascii captura-inteligente\dist\Captura-Tela-PJ\INICIAR.bat
+          'cd /d "%~dp0"' | Add-Content -Encoding ascii captura-inteligente\dist\Captura-Tela-PJ\INICIAR.bat
+          'start "" "Captura-Tela-PJ.exe"' | Add-Content -Encoding ascii captura-inteligente\dist\Captura-Tela-PJ\INICIAR.bat
 
       - name: Publicar programa
         uses: actions/upload-artifact@v4
         with:
-          name: Captura-Inteligente-PJ-Windows
-          path: captura-inteligente/dist/Captura-Inteligente-PJ/
+          name: Captura-Tela-PJ-Simples-Windows
+          path: captura-inteligente/dist/Captura-Tela-PJ/
           if-no-files-found: error
           retention-days: 30
-
