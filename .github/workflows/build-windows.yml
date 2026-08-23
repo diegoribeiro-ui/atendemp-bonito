@@ -42,10 +42,21 @@ jobs:
           --name AtendeMP-Bonito
           app.py
 
+      - name: Gerar versão de diagnóstico
+        run: >-
+          python -m PyInstaller
+          --noconfirm
+          --onefile
+          --console
+          --name AtendeMP-Bonito-Diagnostico
+          app.py
+
       - name: Publicar programa para download
         uses: actions/upload-artifact@v4
         with:
           name: AtendeMP-Bonito-Windows
-          path: dist/AtendeMP-Bonito.exe
+          path: |
+            dist/AtendeMP-Bonito.exe
+            dist/AtendeMP-Bonito-Diagnostico.exe
           if-no-files-found: error
           retention-days: 30
