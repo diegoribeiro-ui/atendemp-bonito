@@ -20,6 +20,25 @@ O revisor de ofícios reconhece o padrão `OF. nº/ano–MP/PJB`, datas por exte
 
 O **Prompt Guiado** possui modo de reprodução orientada por modelo, com entradas separadas para o documento-modelo e os dados do novo caso. Ele detecta o tipo de peça, seções, marcadores, rótulos, conectores, extensão e padrão de citações; em ofícios, também distingue pedidos, subitens e acompanhamento futuro. O prompt gerado instrui a IA a aproveitar apenas a estrutura e o estilo do modelo, usando como fonte factual exclusiva os dados do novo caso. Há regras específicas para ofícios e denúncias criminais.
 
+### Versão integrada das Ferramentas da PJ
+
+A versão atual acrescenta um núcleo de **Casos e procedimentos**. Um caso ativo pode reunir ficha, tarefas, ofícios, prazos, textos, modelos e pendências. O sistema também inclui:
+
+- rascunhos automáticos por aba e por caso;
+- edição de casos, ofícios, itens da biblioteca e conteúdos do histórico;
+- agenda única de ofícios e tarefas, exportável para Outlook (`.ics`) e CSV;
+- acompanhamento de tarefas por responsável, prazo e situação;
+- revisão especializada de ofício, resposta, despacho, denúncia, e-mail, manifestação e parecer;
+- classificação reforçada de respostas e conferência de anexos mencionados;
+- checklists personalizados;
+- perfis estruturais reutilizáveis no Prompt Guiado;
+- exportação de e-mail em `.eml`;
+- backup validado, com opção de mesclar ou substituir;
+- trilha local de auditoria e espelho dos dados em IndexedDB;
+- pesquisa conjunta em casos, tarefas, ofícios, biblioteca e histórico.
+
+Os dados continuam locais e não são criptografados. O espelho em IndexedDB melhora a resistência do armazenamento, mas não substitui o backup periódico nem o uso de perfil individual protegido no Windows.
+
 ## Recursos da primeira versão
 
 - acesso por senha local;
