@@ -37,6 +37,8 @@ A versão atual acrescenta um núcleo de **Casos e procedimentos**. Um caso ativ
 - trilha local de auditoria e espelho dos dados em IndexedDB;
 - pesquisa conjunta em casos, tarefas, ofícios, biblioteca e histórico.
 
+O assistente de documentos também produz um **Inventário técnico ampliado**, com identidade documental, pessoas para conferência, órgãos, procedimentos, datas, prazos, valores, contatos, identificadores, normas, seções, anexos, providências e palavras recorrentes. Há três saídas copiáveis: inventário completo, resumo extrativo com indicação das fontes e ficha preliminar para conferência e cadastro no SAJ. O resumo utiliza somente frases extraídas do próprio documento; dados sem confirmação permanecem sinalizados ou em branco.
+
 Os dados continuam locais e não são criptografados. O espelho em IndexedDB melhora a resistência do armazenamento, mas não substitui o backup periódico nem o uso de perfil individual protegido no Windows.
 
 ## Recursos da primeira versão
