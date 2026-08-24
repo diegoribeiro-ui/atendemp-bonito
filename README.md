@@ -18,6 +18,8 @@ Todas as abas operacionais também possuem um **Assistente automático desta aba
 
 O revisor de ofícios reconhece o padrão `OF. nº/ano–MP/PJB`, datas por extenso, destinatários múltiplos, assunto, referência administrativa e SAJ, pedido principal, subitens por letras, pontos de acompanhamento futuro, linguagem de cooperação, fecho e assinatura. Pedidos atuais e subitens são separados de meros referenciais de acompanhamento, evitando tratá-los automaticamente como cobranças imediatas. Respostas recebidas usam um checklist próprio.
 
+O **Prompt Guiado** possui modo de reprodução orientada por modelo, com entradas separadas para o documento-modelo e os dados do novo caso. Ele detecta o tipo de peça, seções, marcadores, rótulos, conectores, extensão e padrão de citações; em ofícios, também distingue pedidos, subitens e acompanhamento futuro. O prompt gerado instrui a IA a aproveitar apenas a estrutura e o estilo do modelo, usando como fonte factual exclusiva os dados do novo caso. Há regras específicas para ofícios e denúncias criminais.
+
 ## Recursos da primeira versão
 
 - acesso por senha local;
