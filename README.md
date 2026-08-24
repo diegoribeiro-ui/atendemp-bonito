@@ -16,6 +16,8 @@ O módulo **Analisar arquivos** lê localmente PDFs com texto selecionável, DOC
 
 Todas as abas operacionais também possuem um **Assistente automático desta aba**. O usuário pode colar texto ou selecionar um arquivo para obter inventário, conferência específica e preenchimento preliminar dos campos da tarefa, ficha, ofício, matriz, cronologia, checklist, nome de arquivo, e-mail, prompt, revisão ou biblioteca. As sugestões são baseadas em regras e sempre precisam ser conferidas.
 
+O revisor de ofícios reconhece o padrão `OF. nº/ano–MP/PJB`, datas por extenso, destinatários múltiplos, assunto, referência administrativa e SAJ, pedido principal, subitens por letras, pontos de acompanhamento futuro, linguagem de cooperação, fecho e assinatura. Pedidos atuais e subitens são separados de meros referenciais de acompanhamento, evitando tratá-los automaticamente como cobranças imediatas. Respostas recebidas usam um checklist próprio.
+
 ## Recursos da primeira versão
 
 - acesso por senha local;
