@@ -8,6 +8,10 @@ O repositório também contém a **Central IA**, um painel local para organizar 
 
 Abra `central-ia/Central-IA.html` diretamente no navegador. Os registros ficam salvos no próprio navegador e podem ser exportados pelo menu **Backup e dados**. Não publique dados institucionais ou pessoais no repositório.
 
+## Ferramentas da PJ de Bonito
+
+O arquivo `ferramentas-pj/Ferramentas-PJ-Bonito.html` reúne pequenas ferramentas offline e guiadas para servidores e estagiários: tarefas internas, ficha de análise, controle de ofícios e prazos, matriz de conferência de respostas, cronologia, checklists por assunto, nomes padronizados de arquivos, e-mails institucionais, prompts, revisão de minutas e biblioteca de modelos e casos. Os conteúdos podem ser copiados, impressos, salvos no histórico e incluídos em backup local.
+
 ## Recursos da primeira versão
 
 - acesso por senha local;
