@@ -10,7 +10,9 @@ Abra `central-ia/Central-IA.html` diretamente no navegador. Os registros ficam s
 
 ## Ferramentas da PJ de Bonito
 
-O arquivo `ferramentas-pj/Ferramentas-PJ-Bonito.html` reúne pequenas ferramentas offline e guiadas para servidores e estagiários: tarefas internas, ficha de análise, controle de ofícios e prazos, matriz de conferência de respostas, cronologia, checklists por assunto, nomes padronizados de arquivos, e-mails institucionais, prompts, revisão de minutas e biblioteca de modelos e casos. Os conteúdos podem ser copiados, impressos, salvos no histórico e incluídos em backup local.
+O arquivo `ferramentas-pj/Ferramentas-PJ-Bonito.html` reúne pequenas ferramentas guiadas para servidores e estagiários: tarefas internas, ficha de análise, controle de ofícios e prazos, matriz de conferência de respostas, cronologia, checklists por assunto, nomes padronizados de arquivos, e-mails institucionais, prompts, revisão de minutas e biblioteca de modelos e casos. Os conteúdos podem ser copiados, impressos, salvos no histórico e incluídos em backup local.
+
+O módulo **Analisar arquivos** lê localmente PDFs com texto selecionável, DOCX, TXT, RTF e HTML; identifica dados, solicitações, respostas correspondentes, datas, prazos, alertas e cronologia; sugere nomes de arquivos e gera relatório e e-mail de pendências. Ele não utiliza IA nem OCR. A leitura de PDF e DOCX carrega bibliotecas JavaScript públicas pela internet, mas os documentos selecionados não são enviados por esse módulo.
 
 ## Recursos da primeira versão
 
