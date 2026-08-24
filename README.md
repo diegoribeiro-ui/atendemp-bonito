@@ -14,6 +14,8 @@ O arquivo `ferramentas-pj/Ferramentas-PJ-Bonito.html` reúne pequenas ferramenta
 
 O módulo **Analisar arquivos** lê localmente PDFs com texto selecionável, DOCX, TXT, RTF e HTML; identifica dados, solicitações, respostas correspondentes, datas, prazos, alertas e cronologia; sugere nomes de arquivos e gera relatório e e-mail de pendências. Ele não utiliza IA nem OCR. A leitura de PDF e DOCX carrega bibliotecas JavaScript públicas pela internet, mas os documentos selecionados não são enviados por esse módulo.
 
+Todas as abas operacionais também possuem um **Assistente automático desta aba**. O usuário pode colar texto ou selecionar um arquivo para obter inventário, conferência específica e preenchimento preliminar dos campos da tarefa, ficha, ofício, matriz, cronologia, checklist, nome de arquivo, e-mail, prompt, revisão ou biblioteca. As sugestões são baseadas em regras e sempre precisam ser conferidas.
+
 ## Recursos da primeira versão
 
 - acesso por senha local;
